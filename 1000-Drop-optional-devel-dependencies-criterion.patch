@@ -1,0 +1,26 @@
+From 5f500e4a3f99faea26d6a9fc2f08740fd8f1d1d1 Mon Sep 17 00:00:00 2001
+From: Jan Macku <jamacku@redhat.com>
+Date: Wed, 2 Nov 2022 08:47:24 +0100
+Subject: [PATCH] Drop optional devel dependencies (criterion)
+
+fedora-only
+---
+ Cargo.toml | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/Cargo.toml b/Cargo.toml
+index 69b2283..18887e9 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -34,8 +34,6 @@ version = "1.4.0"
+ version = "1.0.115"
+ features = ["derive"]
+ optional = true
+-[dev-dependencies.criterion]
+-version = "0.2.10"
+ 
+ [dev-dependencies.serde_json]
+ version = "1.0.57"
+-- 
+2.38.1
+

@@ -17,6 +17,14 @@ ExclusiveArch:  %{rust_arches}
 
 BuildRequires:  rust-packaging >= 21
 
+# Upstream patches -- official upstream patches released by upstream since the
+# ----------------    last release that are necessary for any reason:
+# Patch0001: ....patch
+
+# Downstream patches -- these should be always included when doing rebase:
+# ------------------
+Patch1000:      1000-Drop-optional-devel-dependencies-criterion.patch
+
 %global _description %{expand:
 URI parser including relative references.}
 
