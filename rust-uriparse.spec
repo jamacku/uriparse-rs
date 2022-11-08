@@ -16,6 +16,7 @@ Source:         %{crates_source}
 ExclusiveArch:  %{rust_arches}
 
 BuildRequires:  rust-packaging >= 21
+BuildRequires:  dos2unix
 
 # Upstream patches -- official upstream patches released by upstream since the
 # ----------------    last release that are necessary for any reason:
@@ -72,6 +73,7 @@ use the "serde" feature of the "%{crate}" crate.
 %prep
 %autosetup -n %{crate}-%{version_no_tilde} -p1
 %cargo_prep
+find -type f -print0 | xargs -0 dos2unix
 
 %generate_buildrequires
 %cargo_generate_buildrequires
